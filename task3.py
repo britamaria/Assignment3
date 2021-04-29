@@ -7,29 +7,7 @@ import judger as jg
 
 options=["Player1: Roll the dice", "Player2: Roll the dice"]
 
-def diceRoll():
-    #randomIndex= np.random.randint(0,3)
-    die1 = np.random.randint(1,6)
-    die2 = np.random.randint(1,6)
-    die3 = np.random.randint(1,6)
-    die4 = np.random.randint(1,6)
-    #return options[randomIndex] 
-    if die1 == die2 or die1 + die2 > die3 + die4:
 
-        print("Player one wins!")
-
-    print(die3, die4)
-    print(die3 + die4)
-
-    if die3 == die4 or die1 + die2 < die3 + die4:
-    
-        print("Player two wins!")
-    
-    
-    if die1 == die2 or die3 == die4 or die1 + die2 == die3 + die4:
-    
-        print("Stalemate! Roll gain.")
-    #return diceRoll()
 
 player1 = diceRoll()
 player2 = diceRoll()
@@ -56,30 +34,7 @@ player2 = diceRoll()
 #     else: 
 #         return 1
     
-def Judger(dices):
-    p1 = 0 
-    p2 = 1
-    draw = 2
-    player1 = [dices[0], dices[1]]
-    player2 = [dices[2], dices[3]]
-    
-    if(player1[0] == player1[1] and player2[0] == player2[1]):
-        if(player1[0] == player2[0]):
-            return draw
-        elif(player1[0] > player2[0]):
-            return p1
-        else:
-            return p2
-    elif(player1[0] == player1[1]):
-        return p1
-    elif(player2[0] == player2[1]):
-        return p2
-    elif(np.sum(player1) == np.sum(player2)):
-        return draw
-    elif(np.sum(player1) > np.sum(player2)):
-        return p1
-    else:
-        return p2 
+
     
     
 Player1 = diceRoll()
