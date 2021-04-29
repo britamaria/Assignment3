@@ -24,3 +24,6 @@ def Judger(dices):
         return p1
     else:
         return p2 
+a = 1
+
+c = 3
